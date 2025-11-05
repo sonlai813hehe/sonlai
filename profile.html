@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile (của tao) - SonLai</title>
+    <link rel="icon" href="logo.png" type="image/png" class="logo-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="loader-container">
@@ -23,12 +24,39 @@
 
     <header class="glass-panel">
         <nav>
-            <a href="index.html" class="logo">SonLai</a>
-            <ul>
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="SonLai Logo" class="logo-icon">
+                SonLai
+            </a>
+            
+            <ul class="desktop-nav">
                 <li><a href="features.html" id="features-link">Tính năng</a></li>
                 <li><a href="#" id="download-link">Tải về</a></li>
                 <li><a href="#" id="support-link">Hỗ trợ</a></li>
-                <li><a href="#" id="profile-link">Profile</a></li>
+                <li><a href="profile.html" id="profile-link" class="active">Profile</a></li>
+                
+                <li class="theme-toggle-li">
+                    <button class="theme-toggle" id="theme-toggle-desktop" title="Toggle theme">
+                        <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                            <mask class="moon" id="moon-mask">
+                                <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                                <circle cx="25" cy="10" r="8" fill="black" />
+                            </mask>
+                            <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                            <g class="sun-beams" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="3" />
+                                <line x1="12" y1="21" x2="12" y2="23" />
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                                <line x1="1" y1="12" x2="3" y2="12" />
+                                <line x1="21" y1="12" x2="23" y2="12" />
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                            </g>
+                        </svg>
+                    </button>
+                </li>
+                
                 <li>
                     <div class="account-menu-container">
                         <a href="#" class="nav-icon" id="account-icon">
@@ -38,15 +66,54 @@
                     </div>
                 </li>
             </ul>
+            
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
+
+    <div class="mobile-menu-panel glass-panel" id="mobile-menu">
+        <a href="#" class="mobile-menu-close" id="mobile-menu-close">&times;</a>
+        <ul>
+            <li><a href="features.html" id="mobile-features-link">Tính năng</a></li>
+            <li><a href="#" id="mobile-download-link">Tải về</a></li>
+            <li><a href="#" id="mobile-support-link">Hỗ trợ</a></li>
+            <li><a href="profile.html" id="mobile-profile-link">Profile</a></li>
+            
+            <li class="theme-toggle-li">
+                <span>Chế độ Sáng/Tối</span>
+                <button class="theme-toggle" id="theme-toggle-mobile" title="Toggle theme">
+                    <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                        <mask class="moon" id="moon-mask-mobile">
+                            <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                            <circle cx="25" cy="10" r="8" fill="black" />
+                        </mask>
+                        <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask-mobile)" fill="currentColor" />
+                        <g class="sun-beams" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </g>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+        <div class="mobile-account-links" id="mobile-account-links">
+            </div>
+    </div>
 
     <main>
         <section class="profile-section">
             <div class="profile-container glass-panel">
                 <div class="profile-header-content">
                     <div class="profile-image-container">
-                        <img src="https://scontent.fhan18-1.fna.fbcdn.net/v/t39.30808-6/515494562_746892094449970_1077444977888699704_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=bd9a62&_nc_eui2=AeHFW1snf_m_zmqH4CMLyNLYJYUuacSDIZ0lhS5pxIMhnf2Q2XRmGdwNmDrMvNBorZxvFoRJRZ4SGWAgiaQya8zG&_nc_ohc=OF8QRDqvwKAQ7kNvwGJoGZv&_nc_oc=AdniHTJbpWG02BhcM4zZmA5AoS6VUc1qjNgPfJTA3VQ8ijXJ95u1SbrQYg9OuVbfS7Y&_nc_zt=23&_nc_ht=scontent.fhan18-1.fna&_nc_gid=U5KR2FSRkAI5mx_zpJ1q9Q&oh=00_AfXFXiVKWPPsbxVnrtCkgIee_IRuTn5aKHiC1FZjdLtZng&oe=68B338FD" alt="Ảnh đại diện Sơn Lại" class="profile-image">
+                        <img src="logo.png" alt="Ảnh đại diện Sơn Lại" class="profile-image">
                     </div>
                     <div class="profile-summary">
                         <h1>Sơn Lại</h1>
