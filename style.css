@@ -749,6 +749,53 @@ section h2 {
     transform: translateY(-3px);
 }
 
+/* === TRANG TRÒ CHƠI (GAMES) === */
+.games-list {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.game-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    text-decoration: none; /* Bỏ gạch chân của thẻ <a> */
+    color: var(--text-color); /* Đảm bảo chữ có màu */
+}
+.game-card:hover {
+    transform: translateY(-10px);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 12px 24px var(--shadow-color);
+}
+.game-card-image {
+    width: 150px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 12px; /* Bo góc như yêu cầu */
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+.game-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh vừa vặn */
+}
+.game-card-text h3 {
+    font-size: 1.8em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+.game-card-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--text-color-secondary);
+}
+
+
 /* === RESPONSIVE DESIGN === */
 @media (max-width: 900px) {
     nav ul.desktop-nav {
@@ -783,6 +830,16 @@ section h2 {
     .profile-image-container {
         width: 180px;
         height: 180px;
+    }
+    .game-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px;
+    }
+    .game-card-image {
+        width: 100%;
+        height: 150px; /* Cao hơn trên mobile */
     }
 }
 
