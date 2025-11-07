@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // === Bảo vệ link (Cho cả Desktop & Mobile) ===
-    const protectedLinkSelectors = '#features-link, #download-link, #support-link, #profile-link, #mobile-features-link, #mobile-download-link, #mobile-support-link, #mobile-profile-link, #mobile-info-link';
+    const protectedLinkSelectors = '#features-link, #game-link, #support-link, #profile-link, #mobile-features-link, #mobile-download-link, #mobile-support-link, #mobile-profile-link, #mobile-info-link';
     
     document.body.addEventListener('click', (e) => {
         const clickedLink = e.target.closest(protectedLinkSelectors);
